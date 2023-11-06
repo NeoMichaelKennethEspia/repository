@@ -1,0 +1,59 @@
+```{R}
+#1.
+# create data frame
+df <- data.frame(shoesize = c(6.5, 9.0, 8.5, 8.5, 10.5, 7.0, 9.5, 9.0, 13.0, 7.5, 10.5, 8.5, 12.0, 10.5, 13.0, 11.5, 8.5, 5.0, 10.0, 6.5, 7.5, 8.5, 10.5, 8.5, 10.5, 11.0, 9.0, 13.0),
+                 height = c(66.0, 68.0, 64.5, 65.0, 70.0, 64.0, 70.0, 71.0, 72.0, 64.0, 74.5, 67.0, 71.0, 71.0, 77.0, 72.0, 59.0, 62.0, 72.0, 66.0, 64.0, 67.0, 73.0, 69.0, 72.0, 70.0, 69.0, 70.0),
+                 gender = c("F", "F", "F", "F", "M", "F", "F", "F", "M", "F", "M", "F", "M", "M", "M", "M", "F", "F", "M", "F", "F", "M", "M", "F", "M", "M", "M", "M")
+)
+df
+```
+
+```{R}
+#B
+# subset for males
+df_male <- df[df$gender=="M", c("shoesize", "height")]
+df_male
+
+# subset for females
+df_female <- df[df$gender=="F", c("shoesize", "height")]
+df_female
+```
+
+```{R}
+#C
+# mean of shoe size
+mean(df$shoesize)
+
+# mean of height
+mean(df$height)
+```
+
+```{R}
+#D
+#There may be some relationship between shoe size and height as taller people may have larger feet. However, we cannot infer causation or a strong correlation without further analysis.
+```
+
+```{R}
+#2
+months <- c("March","April","January","November","January","September","October","September","November","August","January","November","November","February","May","August","July","December","August","August","September","November","February","April")
+factor_months_vector <- factor(months)
+print(factor_months_vector)
+levels(factor_months_vector)
+```
+
+```{R}
+#3
+summary(months)
+summary(factor_months_vector)
+```
+
+```{R}
+direction <- c("East", "West", "North")
+frequency <- c(1, 4, 3)
+direction_factor <- factor(direction, levels = c("East", "West", "North"))
+print(direction_factor)
+```
+```{R}
+df <- read.table(file = 'C:\Users\student.Student-PC\Documents\neo\worksheet4.csv', header=TRUE, sep=',')
+df
+```
