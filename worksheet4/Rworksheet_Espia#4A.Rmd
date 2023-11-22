@@ -61,6 +61,8 @@ print(new_order_data)
 ```
 #5
 ```{r NUM5}
+student_table <- read.table(file = 'import_march.csv', header = TRUE, sep = ',')
+student_table
 
 ```
 #6
@@ -119,7 +121,7 @@ data <- data.frame(
 print(data)
 ```
 #B
-```{`r NUM8B}
+```{r NUM8B}
 for (i in 1:nrow(data)) {
   name <- data$Name[i]
   average_score <- (data$Grade1[i] + data$Grade2[i] + data$Grade3[i] + data$Grade4[i]) / 4
