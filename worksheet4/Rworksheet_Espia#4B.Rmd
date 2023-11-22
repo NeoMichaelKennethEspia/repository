@@ -77,7 +77,7 @@ nrow(male_data)
 ```
 
 ``` {r num4c}
-GraphMF<- table(shoenga$Gender)
+GraphMF<- table(shoepow$Gender)
 barplot(GraphMF,
         main = "Number of Males and Females",
         xlab = "Gender",
